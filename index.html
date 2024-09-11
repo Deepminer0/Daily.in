@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" class="css">
+    <link rel="icon" type="image/x-icon" href="/Image/Chicken/logos.jpeg">
+    <!-- <script src="index.js"></script> -->
+    <title>Document</title>
+   
+
+</head>
+<body>
+    <!-- -----------------------BANNER___________________________ -->
+    
+
+<!-- ----------------------------------------searchbar---------------------------------------- -->
+
+
+
+   <div class="Menu">
+        
+        <h1 class="Grocify">&nbsp;&nbsp; Dailyy<br><span class="minutes">&nbsp;&nbsp;&nbsp;Delivery in minutes</span>
+           
+            <div class="search-container">
+                <input type="text" class="search-input"  placeholder="Search for Sweets, Diyas, Grocery & More" id="search-bar">
+                <div class="dropdown" id="search-dropdown">
+               
+                </div>
+            </div>
+            <a href="#" class="storebuy">Buy by Store</a>
+            <div class="iconbanner">
+                <div class="iconbox"><a href="E-menu.html"><img src="Image/icon2.png" alt="">Electronics</div></a>
+                <div class="iconbox"><a href="Product.html"><img src="Image/icon4.png" alt="">Grocery</div></a>
+                <div class="iconbox"><a href="Cafe.html"><img src="Image/icon3.png" alt="">Coffee</div></a>
+                <div class="iconbox"><a href="Personalcare.html"><img src="Image/icon5.png" alt="">Care items</div></a>
+                <div class="iconbox"><a href="#"><img src="Image/icon1.png" alt="">Gifting</div></a>
+                <div class="iconbox"><a href="Appliances.html"><img src="Image/pan.png" alt="">Appliances</div></a>
+            </div>
+
+
+
+            
+            <div class="logos">
+                <div class="logos-slide">
+                  <img src="Image/usha.png" />
+                  <img src="Image/milton.avif" />
+                  <img src="Image/cello.png" />
+                  <img src="Image/philips.png" />
+                  <img src="Image/Hawkins.png" />
+                  <img src="Image/Pigeon.png" />
+                  <img src="Image/bajaj.png" />
+               
+                </div>
+            
+                <div class="logos-slide">
+                  <img src="Image/usha.png" />
+                  <img src="Image/milton.avif" />
+                  <img src="Image/bajaj.png" />
+                  <img src="Image/cello.png" />
+                  <img src="Image/philips.png" />
+                  <img src="Image/Hawkins.png" />
+                  <img src="Image/Pigeon.png" />    
+                </div>
+              </div>
+            <div class="productboxmain">
+                <div class="productbox"><a href="Pooja.html">Pooja store<img src="Image/Pujaitems/Pujapuja.png" alt="" srcset="" class="pataka"></a></div>
+                <div class="productbox"><a href="#">Repair Service<img src="Image/Repairsss.png" alt="" class="pataka"></a></div>
+                <div class="productbox"><a href="#">Medical store<img src="Image/Clinic/vickss.png"  alt="" class="pataka"></a></div>
+                <div class="productbox"><a href="Sweets.html">Sweets<img src="Image/sweetss.png" alt="" class="sonpapdi"></a></div>
+                <!-- <div class="productbox"><a href="Pooja.html">Pooja Items<img src="Image/Pujaitems/Pujapuja.png" alt="" srcset="" class="pataka"></a></div>
+                <div class="productbox"><a href="#">Repair Service<img src="Image/Repairsss.png" alt="" class="pataka"></a></div>
+                <div class="productbox"><a href="#">Water Delivery<img src="Image/plasticbag.png" alt="" class="pataka"></a></div> -->
+                <!-- <div class="productbox"><a href="Sweets.html">Sweets<img src="Image/sweetss.png" alt="" class="sonpapdi"></a></div> -->
+        </div>
+        </h1><br>
+        
+    </head>
+    <body>
+      
+    <!-- --------------------------searchbox--------------------------------- -->
+        <script>
+
+            document.addEventListener('DOMContentLoaded', () => {
+                const input = document.querySelector("#search");
+                const dropdown = document.querySelector("#dropdown");
+                const listItems = document.querySelectorAll("#list li");
+    
+                input.addEventListener("input", () => {
+                    const filter = input.value.toUpperCase();
+                    let hasVisibleItems = false;
+    
+                    listItems.forEach(item => {
+                        const text = item.textContent.toUpperCase();
+                        if (text.includes(filter)) {
+                            item.style.display = "";
+                            hasVisibleItems = true;
+                        } else {
+                            item.style.display = "none";
+                        }
+                    });
+    
+                    // Show or hide the dropdown based on whether there are visible items
+                    dropdown.style.display = hasVisibleItems ? "block" : "none";
+                });
+    
+                // Hide dropdown when clicking outside
+                document.addEventListener("click", (event) => {
+                    if (!dropdown.contains(event.target) && !input.contains(event.target)) {
+                        dropdown.style.display = "none";
+                    }
+                });
+    
+                // Show dropdown when clicking on the input
+                input.addEventListener("click", () => {
+                    const visibleItems = Array.from(listItems).some(item => item.style.display !== "none");
+                    dropdown.style.display = visibleItems ? "block" : "none";
+                });
+    
+                // Optional: Hide dropdown if an item is clicked
+                listItems.forEach(item => {
+                    item.addEventListener("click", () => {
+                        input.value = item.textContent;
+                        dropdown.style.display = "none";
+                    });
+                });
+            });
+
+            
+        </script>
+        
+        
+        
+        
+<!-- -------------------------------------add to cart-------------------------- -->
+        <script>
+            function openCart() {
+                window.location.href = 'addToCart.html';
+            }
+
+            function updateCartCount() {
+                const cart = JSON.parse(localStorage.getItem('cart')) || [];
+                document.getElementById('cart-count').innerText = cart.length;
+            }
+
+            document.addEventListener('DOMContentLoaded', updateCartCount);
+
+    </script>
+
+    <h2 class="h2text">Product Categories</h2>
+    <div class="productboxmain1">
+        <div class="productbox1"><a href="Product.html">Grocery items<img src="Image/groceryy.png" alt="Grocery " srcset="" class="pataka"></a></div>
+        <div class="productbox1"><a href="Personalcare.html">Personal Care<img src="Image/whispers.png" alt="Personal care" class="pataka"></a></div>
+        <div class="productbox1"><a href="clothmenu.html">Clothes<img src="Image/otshirt.webp" alt="Fashion cloth" class="pataka"></a></div>
+        <div class="productbox1"><a href="Chickenmenu.html">Fish,Chicken & more<img src="Image/mainchicken.png" alt="Chicken" class="sonpapdi"></a></div>
+        <div class="productbox1"><a href="food.html">Fast Food<img src="Image/chowmin.png" alt="Fast food" class="sonpapdi"></a></div>
+      
+</div>
+
+
+      
+
+
+
+
+
+    <!-- ------------------------------shop service category--------------------------------- -->
+   
+    <h2>Buy in store</h2>
+    <div class="productboxmain2">
+        <div class="productbox2"><a href="com-menu.html">Computer <img src="Image/Mouse.webp" alt="" srcset="" class="pataka"></a></div>
+        <div class="productbox2"><a href="C-menu.html">Medical<img src="Image/Clinic/vickss.png" alt="" class="pataka"></a></div>
+        <div class="productbox2"><a href="E-menu.html">Electrical<img src="Image/boat.webp" alt="" class="pataka"></a></div>
+        <div class="productbox2"><a href="Bartan.html">Bartan & Appliances <img src="Image/bluesmix.png" alt="" class="sonpapdi"></a></div>
+        <div class="productbox2"><a href="#">Clean and Dry service<img src="Image/washinemachines.webp" alt="" class="sonpapdi"></a></div>
+      
+</div>
+
+
+    <!-- --------------------------banner2---------------------------------- -->
+    <div class="banner3"> 
+        <img src="Image/homepage/bags.png" alt="">
+        <img src="Image/homepage/rangoli.png" class="rangoli" alt="">
+        <h3 class="deliver1">Find everything you need<br>in <span>your city</span></h3>
+        
+        <h3 class="deliver">Deliver in <span>minutes</span>
+    
+    
+    
+    </div>
+    <div class="banner2"> 
+        
+            <div class="gasbox">
+                
+                <a href="Appliances.html"><img src="Image/mixer.webp" alt="" class="gasboximage">
+                Appliances</a>
+            </div>
+            
+            <div class="gasbox">
+            
+                  <a href="Product.html"><img src="Image/akhandjyoti.png" alt="" class="gasboximage">
+                Puja items</a>
+            </div>
+            <div class="gasbox">
+                
+                  <a href="Bartan.html"><img src="Image/bartanstand.png" alt="" class="gasboximage">
+                Steel Bartan</a>
+            </div>
+          
+
+    </div>
+
+
+
+
+    <!-- <h2 class="h2text">Products </h2><br>
+    <div class="Scrollmenu">
+        <div class="Scrollbox"><a href="Fruitsveg.html"><img src="Image/homepage/freshveg.jpg" alt="Grocery " srcset="" class="pataka"></a></div>
+        <div class="Scrollbox"><a href="Chickenmenu.html"><img src="Image/homepage/Eggs_meat__fish.jpg" alt="" class=""></a></div>
+        <div class="Scrollbox"><a href="Riceata.html"><img src="Image/homepage/Rice_Atta__Dal.jpg" alt="" class=""></a></div>
+        <div class="Scrollbox"><a href=""><img src="Image/homepage/Oil_Masala__Sauces.jpg" alt="" class=""></a></div>
+        <div class="Scrollbox"><a href=""><img src="Image/homepage/Snacks__Biscuits.jpg" alt="" class=""></a></div>
+        <div class="Scrollbox"><a href=""><img src="Image/homepage/Instant__frozen_food.jpg" alt="" class=""></a></div>
+        <div class="Scrollbox"><a href=""><img src="Image/homepage/Chocolates__ice_creams.jpg" alt="" class=""></a></div>
+        <div class="Scrollbox"><a href=""><img src="Image/homepage/Dairy__bread.jpg" alt="" class=""></a></div>
+        <div class="Scrollbox"><a href=""><img src="Image/homepage/Drinks__Juices.jpg" alt="" class=""></a></div>
+        <div class="Scrollbox"><a href=""><img src="Image/homepage/Tea__coffee.jpg" alt="" class=""></a></div>
+        <div class="Scrollbox"><a href=""><img src="Image/homepage/Health__nutrition.jpg" alt="" class=""></a></div>
+        <div class="Scrollbox"><a href=""><img src="Image/homepage/Breakfast_Food_.jpg" alt="" class=""></a></div>
+        <div class="Scrollbox"><a href=""><img src="Image/homepage/Cleaning__household.jpg" alt="" class=""></a></div>
+        <div class="Scrollbox"><a href=""><img src="Image/homepage/Hygiene__personal_care.jpg" alt="" class=""></a></div>
+        <div class="Scrollbox"><a href=""><img src="Image/homepage/Bath__body.jpg" alt="" class=""></a></div>
+        <div class="Scrollbox"><a href=""><img src="Image/homepage/Baby_care.jpg" alt="" class=""></a></div>
+        <div class="Scrollbox"><a href=""><img src="Image/homepage/Kitchen__home.jpg" alt="" class=""></a></div>
+        <div class="Scrollbox"><a href=""><img src="Image/homepage/Stationery-1.jpg" alt="" class=""></a></div>
+        <div class="Scrollbox"><a href=""><img src="Image/homepage/.jpg" alt="" class=""></a></div>
+    
+   
+        
+      
+</div> -->
+
+
+
+
+
+
+   <!-- --------------------------searchbox--------------------------------- -->
+        <script>
+
+            document.addEventListener('DOMContentLoaded', () => {
+                const input = document.querySelector("#search");
+                const dropdown = document.querySelector("#dropdown");
+                const listItems = document.querySelectorAll("#list li");
+    
+                input.addEventListener("input", () => {
+                    const filter = input.value.toUpperCase();
+                    let hasVisibleItems = false;
+    
+                    listItems.forEach(item => {
+                        const text = item.textContent.toUpperCase();
+                        if (text.includes(filter)) {
+                            item.style.display = "";
+                            hasVisibleItems = true;
+                        } else {
+                            item.style.display = "none";
+                        }
+                    });
+    
+                    // Show or hide the dropdown based on whether there are visible items
+                    dropdown.style.display = hasVisibleItems ? "block" : "none";
+                });
+    
+                // Hide dropdown when clicking outside
+                document.addEventListener("click", (event) => {
+                    if (!dropdown.contains(event.target) && !input.contains(event.target)) {
+                        dropdown.style.display = "none";
+                    }
+                });
+    
+                // Show dropdown when clicking on the input
+                input.addEventListener("click", () => {
+                    const visibleItems = Array.from(listItems).some(item => item.style.display !== "none");
+                    dropdown.style.display = visibleItems ? "block" : "none";
+                });
+    
+                // Optional: Hide dropdown if an item is clicked
+                listItems.forEach(item => {
+                    item.addEventListener("click", () => {
+                        input.value = item.textContent;
+                        dropdown.style.display = "none";
+                    });
+                });
+            });
+
+            
+        </script>
+        
+        
+        
+        
+<!-- -------------------------------------add to cart-------------------------- -->
+        <script>
+            function openCart() {
+                window.location.href = 'addToCart.html';
+            }
+
+            function updateCartCount() {
+                const cart = JSON.parse(localStorage.getItem('cart')) || [];
+                document.getElementById('cart-count').innerText = cart.length;
+            }
+
+            document.addEventListener('DOMContentLoaded', updateCartCount);
+
+    </script>
+
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('.repairbutton').forEach(button => {
+            button.addEventListener('click', function() {
+                const serviceType = this.getAttribute('data-service');
+                addServiceToCart(serviceType);
+            });
+        });
+
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.body.insertAdjacentHTML('beforeend', data);
+                const script = document.createElement('script');
+                script.src = 'footer.js';
+                script.onload = () => {
+                    updateFooterCart();
+                    document.getElementById('view-cart').addEventListener('click', () => {
+                        window.location.href = 'addtocart.html';
+                    });
+                    document.addEventListener('cartUpdated', updateFooterCart);
+                };
+                document.body.appendChild(script);
+            });
+    });
+
+    </script>
+<!-- ---------------------------------------purple diwali banner--------------------------- -->
+
+
+
+
+
+    <!-- ------- footer------------------------------ -->
+     <div class="footersection">
+
+
+<!--         
+        <div class="footer1">
+            <img src="Image/tution1.png"  alt="teacher" class="teacher">
+            <h1 class="tution">Home Tution</h1>
+            <h1 class="tution1">Junior and Standard Class</h1>
+        </div> -->
+<!--       
+
+     </div>
+     <img src="Image/building2.png" alt="" class="building">
+     <img src="Image/deliverygirl.png!sw800" alt="" class="deliverygirl">
+     <h1 class="morecity">more services</h1><br>
+     <h1 class="morecity1">Coming Soon</h1> -->
+
+
+     <script>
+    fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.body.insertAdjacentHTML('beforeend', data);
+            const script = document.createElement('script');
+            script.src = 'footer.js';
+            script.onload = () => {
+                // Initialize the footer after the script is loaded
+                updateFooterCart();
+                document.getElementById('view-cart').addEventListener('click', () => {
+                    window.location.href = 'addToCart.html';
+                });
+                // Listen for custom event to update footer when the cart changes
+                document.addEventListener('cartUpdated', updateFooterCart);
+            };
+            document.body.appendChild(script);
+        });
+</script>
+
+<!-- ------------------------------------------------------search bar----------------------------------------- -->
+<script>
+const products = [
+    { name: 'Liquid', img: 'Image/dettol1.webp', url: 'http://127.0.0.1:5500/product-details.html?img=Image%2Fdettol1.webp&name=Liquid&weight=550ml&price=221' },
+    { name: 'Handwash', img: "Image/Clinic/Handwash1.png", url: 'https://example.com/handwash' },
+    { name: 'Milk powder', img: 'Image/milk_powder.jpg', url: 'https://example.com/milk_powder' },
+    { name: 'Cow milk', img: 'Image/cow_milk.jpg', url: 'https://example.com/cow_milk' },
+    { name: 'Dairy milk', img: 'Image/dairy_milk.jpg', url: 'https://example.com/dairy_milk' },
+    // Add more products as needed
+];
+
+// <!-- ------------------------------------------------------search bar----------------------------------------- -->
+const searchBar = document.getElementById('search-bar');
+const searchDropdown = document.getElementById('search-dropdown');
+
+searchBar.addEventListener('input', function() {
+    const query = this.value.toLowerCase();
+    searchDropdown.innerHTML = ''; // Clear previous results
+    if (query) {
+        const filteredProducts = products.filter(product => product.name.toLowerCase().includes(query));
+        filteredProducts.forEach(product => {
+            const item = document.createElement('div');
+            item.classList.add('dropdown-item');
+            item.innerHTML = `
+                <img src="${product.img}" alt="${product.name}" class="item-img">
+                <span class="item-name">${product.name}</span>
+            `;
+            item.addEventListener('click', () => {
+                window.location.href = product.url;
+            });
+            searchDropdown.appendChild(item);
+        });
+        searchDropdown.style.display = 'block';
+    } else {
+        searchDropdown.style.display = 'none';
+    }
+});
+
+document.addEventListener('click', function(event) {
+    if (!searchBar.contains(event.target) && !searchDropdown.contains(event.target)) {
+        searchDropdown.style.display = 'none';
+    }
+});
+</script>
+<!-- --------------------------------------------FOOTER---------------------------------------------------- -->
+ <div class="lastfooter">
+    <div class="footertext">Buy from Store<br><br>
+
+        <a href="#" class="storelink">Grocery Store</a>
+        <a href="#" class="storelink">MeatStore</a>
+        <a href="#" class="storelink">Medical Store</a>
+        <a href="#" class="storelink">Pooja Store</a>
+        <a href="#" class="storelink">Party Store</a>
+        <a href="#" class="storelink">Cloth Store</a>
+        <a href="#" class="storelink">Appliance Store</a>
+        <a href="#" class="storelink">Food Store</a>
+        <a href="#" class="storelink">Computer Store</a>
+        <a href="#" class="storelink">Sweet Store</a>
+        <a href="#" class="storelink">Cafe Store</a>
+        <a href="#" class="storelink">Electronic Store</a>
+
+    </div>
+   
+    <div class="footertext">Categories<br><br>
+        <a href="#" class="storelink">Vegetables & Fruits</a>
+        <a href="#" class="storelink">Coldrinks & Juices</a>
+        <a href="#" class="storelink">Bakery & Biscuits</a>
+        <a href="#" class="storelink">Atta, Rice & Dal</a>
+        <a href="#" class="storelink">Baby Care</a>
+        <a href="#" class="storelink">Pharma & Wellness</a>
+        <a href="#" class="storelink">Personal Care</a>
+        <a href="#" class="storelink">PC Peripherals</a>
+        <a href="#" class="storelink">Cleaning Essentials</a>
+    </div>
+    <div class="footertext"><br><br>
+        <a href="#" class="storelink">Sampoo and Facewash</a>
+        <a href="#" class="storelink">Oil & Masala</a>
+        <a href="#" class="storelink">Tea, Coffe, and Health Drinks</a>
+        <a href="#" class="storelink">Chicken, Meat & Eggs</a>
+        <a href="#" class="storelink">Sauces and  Venegar</a>
+        <a href="#" class="storelink">Snacks and Chips</a>
+        <a href="#" class="storelink">Maggie and Kelloggs</a>
+        <a href="#" class="storelink">Milk and Breads</a>
+        <a href="#" class="storelink">Computer Peripherals</a>
+    </div>
+    <div class="footertext">Useful Links<br><br>
+        <a href="#" class="storelink">Connect with us</a>
+        <a href="#" class="storelink">Book Delivery</a>
+        <a href="#" class="storelink">FAQ</a>
+        <a href="#" class="storelink">About</a>
+        <a href="#" class="storelink"></a>
+ 
+    </div>
+    <div class="footertext"></div>
+ </div>
+<!-- --------------------------------------------FOOTER---------------------------------------------------- -->
+
+<div class="greenfooter">
+   We Deliver everything in <span class="textfooter">minutes</span> 
+
+</div>
+</body>
+</html>

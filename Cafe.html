@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Cafe.css">
+    <title>Product Page</title>
+</head>
+<body>
+  <div class="storebanner">
+    <!-- <img src="Image/food/momobanner.webp" alt=""> -->
+    <h1 class="storename">Cafeteria </h1>
+    <h1 class="storedescription">Deliver in <span>minutes</span></h1>
+</div>
+
+<div class="section"></div>
+
+<script>
+  
+  const items = {
+    Coffee: [
+     { img: "Image/cafes.webp", name: " Expresso Hot Coffee ", weight: 'Be Happy Cafe', price: "₹99" },
+      { img: "Image/cafe/ca.png", name: "Caffe Americano Hot coffee", weight: 'Be Happy Cafe', price: "₹99" },
+      { img: "Image/cafe/121212.png", name: "cappuccino Hot coffee", weight: 'Be Happy Cafe', price: "₹99" },
+      { img: "Image/cafe/istockphoto-1152767411-612x612.jpg", name: "Cafe Latte coffee  ", weight: 'Be Happy Cafe', price: "₹₹99" },
+      { img: "Image/cafe/images.jpeg", name: "Caramel Latte", weight: 'Be Happy Cafe', price: "₹99" },
+      { img: "Image/cafe/pngtree-cafe-mocha-coffee-ingredient-png-image_10186714.png", name: "Caffe Mocha", weight: 'Be Happy Cafe', price: "₹₹99" },
+      { img: "Image/cafe/cup-of-hot-chocolate-with-cream-isolated-on-transparent-background-generative-ai-png.webp", name: "  Hot chocolate coffee", weight: 'Be Happy Cafe', price: "₹99" },
+      { img: "Image/cafe/iced_latte_macchiato.webp", name: "Iced Latte", weight: 'Be Happy Cafe', price: "₹₹99" },
+      { img: "Image/cafe/545454.png", name: " Iced Caramel Latte ", weight: 'Be Happy Cafe', price: "₹₹99" },
+      { img: "Image/cafe/coldbrew_69e25680-9a16-41ed-ad47-e42d7b201b6a.webp", name: " Iced Americano ", weight: 'Be Happy Cafe', price: "₹99" },
+     
+    ],
+    Pizza: [
+    { img: "Image/cafe/cheese-pizza, williestouts.ca, pub and grill and restaurants in toronto-800x800.jpg", name: "Fresh Margherita Pizza", weight: 'Be Happy Cafe', price: "₹199" },
+      { img: "Image/cafe/Farmhouse.jpg", name: " Veggie Pizza ", weight: 'Be Happy Cafe', price: "₹199" },
+      { img: "Image/cafe/Peppy_Paneer.jpg", name: " Veg Paneer Fresh Pizza ", weight: 'Be Happy Cafe', price: "₹199" },
+      { img: "Image/cafe/cheese-bigger.png", name: " Cheese fresh pizza ", weight: 'Be Happy Cafe', price: "₹199" },
+      { img: "Image/cafe/product-overhead-TAVERN-PEPPERONI.png", name: " Pepperoni Pizza ", weight: 'Be Happy Cafe', price: "₹199" },
+      { img: "Image/cafe/images_640_20230809_pngwingcom2-20230809-155943.png", name: "Extra Cheese Pizza ", weight: 'Be Happy Cafe', price: "₹199" },
+      { img: "Image/cafe/1382541346030.webp", name: "Chicken Pizza", weight: 'Be Happy Cafe', price: "₹199" },
+  
+    
+  ],
+
+    Cake: [
+    { img: "Image/cafe/Pucker+Up+Lemon+Cup+Cake+Slice2.png", name: " Fresh Lemon Cake ", weight: 'Be Happy Cafe', price: "₹79" },
+      { img: "Image/cafe/chocolate-cake-slice-white-background_720722-8483.avif", name: " Chocolate Cake  ", weight: 'Be Happy Cafe', price: "₹79" },
+      { img: "Image/cafe/image_f7fdb9e0-df27-4321-9f41-4ece44608846_530x@2x.webp", name: " Peanut Fresh Cake ", weight: 'Be Happy Cafe', price: "₹79" },
+      { img: "Image/cafe/delicious-slice-carrot-cake_1203-1641.avif", name: " Fresh Carrot Cake ", weight: 'Be Happy Cafe', price: "₹79" },
+      { img: "Image/cafe/llllllll.png", name: " Moist Creamy Cake ", weight: 'Be Happy Cafe', price: "₹79" },
+      { img: "Image/cafe/hot.png", name: " Hot Dark Chocolate ", weight: 'Be Happy Cafe', price: "₹79" },
+      { img: "Image/cafe/pine.jpg", name: "Fresh Pine Apple Cake  ", weight: 'Be Happy Cafe', price: "₹79" },
+    
+
+  
+
+    
+    ],
+    Drink: [
+      { img: "Image/cafe/51zVMn8GdxL.jpg", name: " Nescafe Ready To Drink Latte ", weight: '180ml', price: "₹65" },
+      { img: "Image/cafe/100401160_11-coca-cola-soft-drink-original-taste.webp", name: " Coca Cola  Can", weight: '300ml', price: "₹40" },
+      { img: "Image/cafe/sprite-300-ml-can-product-images-o490809343-p490809343-0-202203151402.webp", name: "  Sprite Can", weight: '300ml', price: "₹40" },
+      { img: "Image/cafe/Mountain-Dew-Soft-Drink-250ml.webp", name: "Mountain Dew Soft Drink Can  ", weight: '250ml', price: "₹40" },
+      { img: "Image/cafe/180961-3_5-red-bull-energy-drink.webp", name: "  Redbull Energy Drink can", weight: '250ml', price: "₹99" },
+      { img: "Image/cafe/251006_13-sprite-soft-drink-lime-flavoured.webp", name: "  Sprite  Bottle 750ml", weight: '750ml', price: "₹45" },
+      { img: "Image/cafe/coca-cola-original-plastic-bottle-15-l.jpeg", name: " Cocacola Soft Drink", weight: '750ml', price: "₹45" },
+      { img: "Image/cafe/265874_5-mountain-dew-soft-drink.webp", name: "Mountain Dew soft drink  ", weight: '750ml', price: "₹45" },
+      { img: "Image/cafe/51IRLdwmqcL.jpg", name: " Limca soft drink 750ml ", weight: '750ml', price: "₹45" },
+   
+    
+ 
+
+     
+    ],
+    Tea: [
+ 
+    { img: "Image/cafe/tea.png", name: " Earl grey tea ", weight: 'Be Happy Cafe', price: "₹59" },
+      { img: "Image/cafe/ROSEGREENSTEVIA (1).webp", name: "Rose Green Tea  ", weight: 'Be Happy Cafe', price: "₹59" },
+      { img: "Image/cafe/zyanna-masala-chai-3-removebg-preview.png", name: " Masala Chai ", weight: 'Be Happy Cafe', price: "₹59" },
+      { img: "Image/cafe/per.png", name: " Peppermint Tea ", weight: 'Be Happy Cafe', price: "₹59" },
+      { img: "Image/cafe/55aa.jpg", name: " Tulsi ginger tea ", weight: 'Be Happy Cafe', price: "₹59" },
+      { img: "Image/cafe/1aa1a.png", name: "Fresh Lemon Ginger Honey tea", weight: 'Be Happy Cafe', price: "₹59" },
+      { img: "Image/cafe/pngtree-ginger-and-lemon-tea-png-image_11897656.png", name: "Fresh Lemon Ginger Honey   ", weight: 'Be Happy Cafe', price: "₹59" },
+    //   { img: "Image/cafe/.jpg", name: "  ", weight: 'Be Happy Cafe', price: "₹" },
+    //   { img: "Image/cafe/.jpg", name: "  ", weight: 'Be Happy Cafe', price: "₹" },
+    
+    ],
+
+ 
+  };
+
+  
+
+  const section = document.querySelector(".section");
+
+  function displayItems(category) {
+  section.innerHTML = ""; // Clear previous items
+  items[category].forEach(item => {
+      section.innerHTML += `
+          <div class="box">
+              <img src="${item.img}" alt="${item.name}" onclick="openProductDetails('${item.img}', '${item.name}', '${item.weight}', '${item.price.replace('₹', '')}')">
+              <h3>${item.name}</h3>
+              <h6>${item.weight}</h6>
+              <h5>${item.price}</h5>
+              <button class="add-button" data-name="${item.name}" data-price="${item.price.replace('₹', '')}" data-weight="${item.weight}">ADD</button>
+          </div>
+      `;
+  });
+
+  document.querySelectorAll('.add-button').forEach(button => {
+      button.addEventListener('click', function() {
+          const itemName = this.getAttribute('data-name');
+          const itemPrice = parseFloat(this.getAttribute('data-price'));
+          const itemWeight = this.getAttribute('data-weight');
+          const itemImg = this.parentNode.querySelector('img').getAttribute('src');
+          addItemToCart(itemName, itemPrice, itemImg, itemWeight);
+      });
+  });
+}
+
+
+function openProductDetails(img, name, weight, price) {
+  const url = `product-details.html?img=${encodeURIComponent(img)}&name=${encodeURIComponent(name)}&weight=${encodeURIComponent(weight)}&price=${encodeURIComponent(price)}`;
+  window.location.href = url;
+}
+
+
+// ---------------------------------------------------------------------------------------------GRAM PROBLEM SOLVED__________________________________________
+function addItemToCart(itemName, itemPrice, itemImg, itemWeight) {
+  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+  const existingItem = cart.find(item => item.name === itemName);
+
+  if (existingItem) {
+      existingItem.count++;
+  } else {
+      cart.push({
+          name: itemName,
+          price: itemPrice,
+          img: itemImg,
+          weight: itemWeight, // Ensure itemWeight is a string or number
+          count: 1
+      });
+  }
+
+  localStorage.setItem('cart', JSON.stringify(cart));
+  document.dispatchEvent(new Event('cartUpdated'));
+}
+
+
+// ---------------------------------------------------------------------------------------------GRAM PROBLEM SOLVED__________________________________________
+function updateFooterCart() {
+  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+  const cartCount = cart.reduce((count, item) => count + item.count, 0);
+  const totalPrice = cart.reduce((total, item) => total + (item.price * item.count), 0);
+
+  document.getElementById('cart-count').innerText = cartCount;
+  document.getElementById('total-price').innerText = `₹${totalPrice}`;
+}
+
+displayItems('Drink');  // Initial display
+
+fetch('footer.html')
+  .then(response => response.text())
+  .then(data => {
+    document.body.insertAdjacentHTML('beforeend', data);
+    const script = document.createElement('script');
+    script.src = 'footer.js';
+    script.onload = () => {
+      updateFooterCart();
+      document.getElementById('view-cart').addEventListener('click', () => {
+        window.location.href = 'addToCart.html';
+      });
+      document.addEventListener('cartUpdated', updateFooterCart);
+    };
+    document.body.appendChild(script);
+  });
+  
+// ------------------------------------------------------------------------------Quick View Cart integration------------------------------------------------
+</script> 
+
+<div class="scrolling-wrapper">
+    <div class="card" onclick="displayItems('Coffee')"><img src="Image/cafes.webp"alt="Chowmin"class="menuhover"></div>
+    <div class="card" onclick="displayItems('Tea')"><img src="Image/Cafe/tea.png"alt="Momos"class="menuhover"></div>
+    <div class="card" onclick="displayItems('Pizza')"><img src= "Image/Cafe/pizza.webp"alt="Chicken chilli"class="menuhover"></div>
+    <div class="card" onclick="displayItems('Cake')"><img src="Image/Cafe/detail_bb_Carrot_Cake.webp"alt="Pannerchilli"class="menuhover"></div>
+    <div class="card" onclick="displayItems('Drink')"><img src="Image/Cafe/pepsi"alt="Chaat"class="menuhover"></div>
+
+ 
+    
+    <!-- <div class="card" onclick="displayItems('household')"><img src="Image/oil.webp" alt="Household"></div> -->
+</div>
+
+</body>
+</html>

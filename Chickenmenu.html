@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="chickenmenu.css">
+    <title>Product Page</title>
+</head>
+<body>
+  <div class="storebanner">
+    <!-- <img src="Image/Chicken/chikens.png" alt=""> -->
+    <h1 class="storename">Meat store</h1>
+    <h1 class="storedescription">Fresh Meat deliver in <span>minutes</span></h1>
+</div>
+
+<div class="section"></div>
+
+<script>
+  
+  const items = {
+    Chicken: [
+      { img: "Image/chicken/currycut.jpg", name: "Chicken for Curry cut ", weight: '1Kg', price: "₹150" },
+      { img: "Image/chicken/currycut.jpg", name: "Chicken for Curry cut ", weight: '500g', price: "₹80" },
+      { img: "Image/chicken/chikens.png", name: "Fresh Chicken complete full", weight: '1kg', price: "₹130" },
+      { img: "Image/chicken/chikens.png", name: "Fresh Chicken complete full", weight: '500g', price: "₹70" },
+      { img: "Image/chicken/mainbonless.webp", name: "Chicken boneless for gymer", weight: '1kg', price: "₹190" },
+      { img: "Image/chicken/mainbonless.webp", name: "Chicken boneless for gymer", weight: '500g', price: "₹100" },
+      { img: "Image/chicken/legpeice.jpg", name: "Fresh Chicken Leg Piece", weight: '5pc', price: "₹150" },
+      { img: "Image/chicken/beast.png", name: "Chicken Breast for gymer", weight: '1kg', price: "₹200" },
+      { img: "Image/chicken/beast.png", name: "Chicken Breast for gymer", weight: '500g', price: "₹100" },
+      { img: "Image/chicken/desichicekn.webp", name: "Desi Chicken ", weight: '1kg', price: "₹250" },
+     
+    
+
+    ],
+    Fish: [
+    { img: "Image/chicken/Rohu-Fish-1.webp", name: "Fresh Rohu Fish", weight: '1Kg', price: "₹200" },
+    { img: "Image/chicken/catfish.webp", name: "Fresh Cat Fish", weight: '1kg', price: "₹150" },
+    { img: "Image/chicken/Rohu-Fish-1.webp", name: "Fresh Rohu Fish", weight: '500g', price: "₹100" },
+    { img: "Image/chicken/catfish.webp", name: "Fresh Cat Fish", weight: '500g', price: "₹130" },
+    { img: "Image/chicken/keski.png", name: "Fresh Keski Fish", weight: '500g', price: "₹200" },
+    { img: "Image/chicken/Rohu-Fish-1.webp", name: "Fresh Rohu Fish", weight: '750g', price: "₹150" },
+    { img: "Image/chicken/keski.png", name: "Fresh Keski Fish", weight: '500g', price: "₹200" },
+    { img: "Image/chicken/catfish.webp", name: "Fresh Cat Fish", weight: '750g', price: "₹100" },
+    { img: "Image/chicken/jingha.webp", name: "Fresh Jingha Fish", weight: '100g', price: "₹50" },
+ 
+    ],
+    Meat: [
+    { img: "Image/chicken/meat1.png", name: "Freash Goat Meat", weight: '1Kg', price: "₹700" },
+    { img: "Image/chicken/meat1.png", name: "Freash Goat Meat", weight: '500g', price: "₹350" },
+    { img: "Image/chicken/leg.webp", name: "Fresh Goat Meat Leg", weight: '1Kg', price: "₹300" },
+    { img: "Image/chicken/feet.avif", name: "Fresh Goat Meat Feet ", weight: '1pair', price: "₹100" },
+    { img: "Image/chicken/", name: "", weight: '1Kg', price: "₹" },
+    { img: "Image/chicken/", name: "", weight: '1Kg', price: "₹" },
+    { img: "Image/chicken/", name: "", weight: '1Kg', price: "₹" },
+    { img: "Image/chicken/", name: "", weight: '1Kg', price: "₹" },
+    { img: "Image/chicken/", name: "", weight: '1Kg', price: "₹" },
+
+    
+    ],
+    Eggs: [
+    { img: "Image/chicken/egg-trays1.jpg", name: "Egg Tray", weight: '1Tray', price: "₹150" },
+    { img: "Image/chicken/whitegg.png", name: "Egg ", weight: '6 pc', price: "₹48" },
+    { img: "Image/chicken/egg-trays1.jpg", name: "Egg Tray", weight: '1Tray', price: "₹150" },
+    { img: "Image/chicken/whitegg.png", name: "Egg ", weight: '6 pc', price: "₹48" },
+    { img: "Image/chicken/egg-trays1.jpg", name: "Egg Tray", weight: '1Tray', price: "₹150" },
+    { img: "Image/chicken/whitegg.png", name: "Egg ", weight: '6 pc', price: "₹48" },
+    { img: "Image/chicken/egg-trays1.jpg", name: "Egg Tray", weight: '1Tray', price: "₹150" },
+    { img: "Image/chicken/whitegg.png", name: "Egg ", weight: '6 pc', price: "₹48" },
+    { img: "Image/chicken/egg-trays1.jpg", name: "Egg Tray", weight: '1Tray', price: "₹150" },
+    { img: "Image/chicken/whitegg.png", name: "Egg ", weight: '6 pc', price: "₹48" },
+    { img: "Image/chicken/egg-trays1.jpg", name: "Egg Tray", weight: '1Tray', price: "₹150" },
+    { img: "Image/chicken/whitegg.png", name: "Egg ", weight: '6 pc', price: "₹48" },
+
+     
+    ],
+    Masala: [
+    { img: "Image/masalasss.png", name: "Everest Chicken Masala", weight: '100g', price: "₹92" },
+    { img: "Image/chicken/71usqRAZlSL._SL1500_.jpg", name: "Catch Chicken Masala", weight: '100g', price: "₹59" },
+    { img: "Image/chicken/81sNx-neOaL._SL1500_.jpg", name: "MDH Chicken Masala", weight: '100g', price: "₹73" },
+    { img: "Image/chicken/81cHKbEesHL._SL1409_.jpg", name: "Everest Tandoori Chicken Masala Powder", weight: '100g', price: "₹70" },
+    { img: "Image/chicken/81UH7pyz+cL._SL1500_.jpg", name: "Everest Meat Masala Powder", weight: '100g', price: "₹62" },
+    { img: "Image/chicken/61zuPEigJhL._SL1000_.jpg", name: "Catch Meat Masala", weight: '100g', price: "₹65" },
+    { img: "Image/chicken/717T+xk3Z2L._SL1500_.jpg", name: "MDH Powder - Tandoori Chicken Masala", weight: '100g', price: "₹94" },
+    { img: "Image/chicken/717Oqd6-FGL._SL1500_.jpg", name: "Everest Garam Masala", weight: '100g', price: "₹75" },
+    { img: "Image/chicken/61MyqJ4PkEL._SL1000_.jpg", name: "MDH Garam Masala", weight: '100g', price: "₹95" },
+    { img: "Image/chicken/817rZQ5gILL._SL1500_.jpg", name: "Everest Powder - Fish Curry Masala", weight: '50g', price: "₹47" },
+],
+    Oil: [
+      
+       { img: "Image/oil.png", name: "Fortune Mustard Oil", weight: "1 Litre", price: "₹165" },
+       { img: "Image/oil.png", name: "FOrtune Mustard Oil", weight: "500ml", price: "₹75" },
+        { img: "Image/spyahealth.jpg", name: " Fortune Soyabean Oil ", weight: "Pouch 1 Litre", price: "₹133" },
+        // { img: "Image/soyahealth5.webp", name: "Soya Health", weight: "1L", price: "₹60" },
+        { img: "Image/kachi.webp", name: "Fortune Premium Kachi Ghani Oil", weight: "Pouch 1 Litre", price: "₹140" },
+        { img: "Image/safolayellow1.webp", name: "Saffola Active Refined Oil P", weight: "Pouch 1 Litre", price: "₹135" },
+        { img: "Image/safolayellow.webp", name: "Saffola Gold Refined Oil", weight: "Pouch 1L", price: "₹145" },
+         { img: "Image/chicken/61TTCzxGUbS._SL1200_.jpg", name: "Dhara Kachhi Ghani Mustard Oil ", weight: "Pouch 1 Litre", price: "₹140" }
+],
+    Chickenmasala: [
+      
+    
+    ],
+    Chickenboneles: [
+ 
+     
+
+    ],
+ 
+  };
+
+  
+
+  const section = document.querySelector(".section");
+
+  function displayItems(category) {
+  section.innerHTML = ""; // Clear previous items
+  items[category].forEach(item => {
+      section.innerHTML += `
+          <div class="box">
+              <img src="${item.img}" alt="${item.name}" onclick="openProductDetails('${item.img}', '${item.name}', '${item.weight}', '${item.price.replace('₹', '')}')">
+              <h3>${item.name}</h3>
+              <h6>${item.weight}</h6>
+              <h5>${item.price}</h5>
+              <button class="add-button" data-name="${item.name}" data-price="${item.price.replace('₹', '')}" data-weight="${item.weight}">ADD</button>
+          </div>
+      `;
+  });
+
+  document.querySelectorAll('.add-button').forEach(button => {
+      button.addEventListener('click', function() {
+          const itemName = this.getAttribute('data-name');
+          const itemPrice = parseFloat(this.getAttribute('data-price'));
+          const itemWeight = this.getAttribute('data-weight');
+          const itemImg = this.parentNode.querySelector('img').getAttribute('src');
+          addItemToCart(itemName, itemPrice, itemImg, itemWeight);
+      });
+  });
+}
+
+
+function openProductDetails(img, name, weight, price) {
+  const url = `product-details.html?img=${encodeURIComponent(img)}&name=${encodeURIComponent(name)}&weight=${encodeURIComponent(weight)}&price=${encodeURIComponent(price)}`;
+  window.location.href = url;
+}
+
+
+// ---------------------------------------------------------------------------------------------GRAM PROBLEM SOLVED__________________________________________
+function addItemToCart(itemName, itemPrice, itemImg, itemWeight) {
+  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+  const existingItem = cart.find(item => item.name === itemName);
+
+  if (existingItem) {
+      existingItem.count++;
+  } else {
+      cart.push({
+          name: itemName,
+          price: itemPrice,
+          img: itemImg,
+          weight: itemWeight, // Ensure itemWeight is a string or number
+          count: 1
+      });
+  }
+
+  localStorage.setItem('cart', JSON.stringify(cart));
+  document.dispatchEvent(new Event('cartUpdated'));
+}
+
+
+// ---------------------------------------------------------------------------------------------GRAM PROBLEM SOLVED__________________________________________
+function updateFooterCart() {
+  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+  const cartCount = cart.reduce((count, item) => count + item.count, 0);
+  const totalPrice = cart.reduce((total, item) => total + (item.price * item.count), 0);
+
+  document.getElementById('cart-count').innerText = cartCount;
+  document.getElementById('total-price').innerText = `₹${totalPrice}`;
+}
+
+displayItems('Chicken');  // Initial display
+
+fetch('footer.html')
+  .then(response => response.text())
+  .then(data => {
+    document.body.insertAdjacentHTML('beforeend', data);
+    const script = document.createElement('script');
+    script.src = 'footer.js';
+    script.onload = () => {
+      updateFooterCart();
+      document.getElementById('view-cart').addEventListener('click', () => {
+        window.location.href = 'addToCart.html';
+      });
+      document.addEventListener('cartUpdated', updateFooterCart);
+    };
+    document.body.appendChild(script);
+  });
+  
+// ------------------------------------------------------------------------------Quick View Cart integration------------------------------------------------
+</script> 
+
+<div class="scrolling-wrapper">
+    <div class="card" onclick="displayItems('Chicken')"><img src="Image/chicken/chickensss.png"alt="Chicken"class="menuhover"></div>
+    <div class="card" onclick="displayItems('Eggs')"><img src="Image/chicken/brownegg.png"alt="Eggs"class="menuhover"></div>
+    <div class="card" onclick="displayItems('Fish')"><img src= "Image/chicken/wholefish.png"alt="Fish"class="menuhover"></div>
+    <div class="card" onclick="displayItems('Chicken')"><img src="Image/chicken/meat1.png"alt="Chicken"class="menuhover"></div>
+    <div class="card" onclick="displayItems('Masala')"><img src="Image/masalasss.png"alt="Masala"class="menuhover"></div>
+    <div class="card" onclick="displayItems('Oil')"><img src= "Image/oil.png"alt="Oi"class="menuhover"></div>
+ 
+    
+    <!-- <div class="card" onclick="displayItems('household')"><img src="Image/oil.webp" alt="Household"></div> -->
+</div>
+
+</body>
+</html>
